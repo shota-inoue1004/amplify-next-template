@@ -7,6 +7,9 @@ import {
   createStorageBrowser,
 } from "@aws-amplify/ui-react-storage/browser";
 import "@aws-amplify/ui-react-storage/styles.css";
+import {
+  Authenticator
+} from "@aws-amplify/ui-react";
 
 
 Amplify.configure(outputs);
@@ -17,12 +20,14 @@ const { StorageBrowser } = createStorageBrowser({
 
 export default function App() {
   return (
+    <Authenticator>
     <div className="p4">
       <h1>Storage Browser</h1>
       <div className="mt-4">
         <StorageBrowser/>
       </div>
     </div>
+    </Authenticator>
   );
 }
 
