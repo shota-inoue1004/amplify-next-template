@@ -11,7 +11,7 @@ import "@aws-amplify/ui-react-storage/styles.css";
 
 Amplify.configure(outputs);
 
-export const { StorageBrowser } = createStorageBrowser({
+const { StorageBrowser } = createStorageBrowser({
   config: createAmplifyAuthAdapter(),
 });
 
