@@ -4,7 +4,7 @@ export const storage = defineStorage({
   name: 'amplifyTeamDrive',
   access: (allow) => ({
     "authenticated/*": [
-      allow.authenticated.to(["read"]),
+      allow.authenticated.to(['read', 'write', 'delete']),
     ]
   }),
 });
